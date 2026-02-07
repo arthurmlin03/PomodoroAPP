@@ -35,7 +35,7 @@ For a while, I’ve been using the technique through the website (https://pomofo
 
 ### Rest Mode 🟢
 ![Rest Mode](./Assets/RestMode.png)
-## 💻 How to Run
+## How to Run
 
 ### Prerequisites
 - [.NET 8 SDK](https://dotnet.microsoft.com/download)
