@@ -1,0 +1,70 @@
+﻿@model PomodoroAPP.Models.PomodoroModel
+
+@{
+    ViewData["Title"] = "Pomodoro Timer";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="~/css/pomodoro.css" />
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card pomodoro-card shadow-lg p-4 text-center">
+        <div class="card-body">
+
+            <h1 class="card-title text-primary mb-4">
+                <i class="bi bi-stopwatch"></i> Pomodoro
+            </h1>
+
+            <div class="mb-3">
+                <span id="status-badge" class="badge bg-secondary fs-5">@Model.Status</span>
+            </div>
+
+            <h3 id="timer-display" class="timer-text my-4">
+                @Model.Minutes.ToString("00"):@Model.Seconds.ToString("00")
+            </h3>
+
+            <div class="d-grid gap-2 d-md-block">
+                <button id="btn-iniciar" class="btn btn-success btn-lg px-4" onclick="startTimer()">
+                    <i class="bi bi-play-fill"></i> Start
+                </button>
+                <button id="btn-pausar" class="btn btn-warning btn-lg px-4 text-white" onclick="pauseTimer()">
+                    <i class="bi bi-pause-fill"></i> Pause
+                </button>
+                <button id="btn-reset" class="btn btn-primary btn-lg px-4" onclick="resetTimer()">
+                    <i class="bi bi-arrow-counterclockwise"></i> Reset
+                </button>
+            </div>
+        </div>
+        <div class="card-footer border-0 bg-transparent mt-3">
+            <div class="card mini-card">
+                <div class="card-body py-2 d-flex align-items-center justify-content-center">
+                    <span id="footer-message">Made by Arthur Lin</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<audio id="audio-alarm" src="~/audio/alarm.mp3" preload="auto"></audio>
+
+<script>
+    window.pomodoroConfig = {
+        minutes: @Model.Minutes,
+        seconds: @Model.Seconds,
+        restTime: @Model.RestTime,
+        currentMode: @((int)Model.CurrentMode),
+        urls: {
+            finishEndpoint: '@Url.Action("FinishPomodoro", "Pomodoro")'
+        },
+        texts: {
+            focusing: "Focusing...",
+            resting: "Resting...",
+            paused: "Paused",
+            ready: "@Model.Status",
+            restTime: "Rest Time!",
+            alertRest: "Congrats! Now rest.",
+            alertWork: "Time to get back to work!"
+        }
+    };
+</script>
+
+<script src="~/js/pomodoro.js"></script>

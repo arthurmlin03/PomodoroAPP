@@ -1,0 +1,60 @@
+﻿body {
+	transition: background-color 1.0s ease, color 1.0s ease;
+}
+
+.theme-focus {
+	background-color: #F54927;
+	color: #ecf0f1;
+}
+
+.theme-rest {
+	background-color: #27ae60;
+	color: #fff;
+}
+
+.theme-focus .pomodoro-card {
+	background-color: #ecf0f1;
+	color: #ecf0f1;
+	border: 1px solid #F5276C;
+}
+
+.theme-rest .pomodoro-card {
+	background-color: #ecf0f1;
+	color: #2c3e50;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.timer-text {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 5rem;
+	font-weight: bold;
+	color: #343a40;
+}
+
+.pomodoro-card {
+	min-width: 350px;
+	border-radius: 15px;
+	transition: background-color 1.0s ease, color 1.0s ease;
+	background-color: #ecf0f1;
+	color: #2c3e50;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.mini-card {
+	transition: all 0.5s ease;
+	font-weight: 500;
+}
+
+.theme-focus .mini-card {
+	background-color: #ffece9;
+	border: 1px solid #F54927;
+	color: #F54927;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.theme-rest .mini-card {
+	background-color: #dff9fb;
+	border: 1px solid #badc58;
+	color: #27ae60;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}

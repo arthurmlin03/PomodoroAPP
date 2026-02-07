@@ -1,0 +1,25 @@
+﻿# Build
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Database
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Logs
+*.log
+
+# Temp Files
+Thumbs.db
+.DS_Store
+
+appsettings.Development.json
