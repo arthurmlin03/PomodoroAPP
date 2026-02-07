@@ -9,6 +9,9 @@
 *.userosscache
 *.sln.docstates
 
+# Rider
+.idea/
+
 # Database
 *.mdf
 *.ldf
@@ -18,8 +21,16 @@
 # Logs
 *.log
 
-# Temp Files
+# OS
 Thumbs.db
 .DS_Store
 
+# App settings (secrets)
 appsettings.Development.json
+appsettings.*.json
+
+# NuGet
+packages/
+
+# Publish
+publish/
