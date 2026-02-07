@@ -27,7 +27,8 @@ Thumbs.db
 
 # App settings (secrets)
 appsettings.Development.json
-appsettings.*.json
+appsettings.Local.json
+appsettings.Secrets.json
 
 # NuGet
 packages/
