@@ -35,7 +35,7 @@ For a while, I’ve been using the technique through the website (https://pomofo
 
 ### Rest Mode 🟢
 ![Rest Mode](./Assets/RestMode.png)
-## 💻 How to Run
+## How to Run
 
 ### Prerequisites
 - [.NET 8 SDK](https://dotnet.microsoft.com/download)
@@ -45,7 +45,7 @@ For a while, I’ve been using the technique through the website (https://pomofo
 
 1. **Clone the repository**
    bash
-   git clone [https://github.com/SEU-USUARIO/PomodoroAPP.git](https://github.com/SEU-USUARIO/PomodoroAPP.git)
+   git clone [https://github.com/arthurmlin03/PomodoroAPP.git](https://github.com/arthurmlin03/PomodoroAPP.git)
    cd PomodoroAPP
 
 2. **Configure Database** Update the connection string in appsettings.json if necessary. By default, it uses LocalDB:
